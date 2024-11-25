@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="99" height="99" viewBox="0 0 99 99">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_221" data-name="Rectangle 221" width="45.732" height="45.898" fill="#003a60"/>
+    </clipPath>
+  </defs>
+  <g id="chat" transform="translate(-911 -3609)">
+    <g id="Ellipse_11" data-name="Ellipse 11" transform="translate(911 3609)" fill="#fff" stroke="#dddc00" stroke-width="3">
+      <circle cx="49.5" cy="49.5" r="49.5" stroke="none"/>
+      <circle cx="49.5" cy="49.5" r="48" fill="none"/>
+    </g>
+    <g id="Group_832" data-name="Group 832" transform="translate(938 3636)" clip-path="url(#clip-path)">
+      <path id="Path_76" data-name="Path 76" d="M28.567,13.671a15.109,15.109,0,0,1,9.771.845A19.492,19.492,0,1,0,6.407,33.943L6.266,41.5l6.624-3.661a19.4,19.4,0,0,0,8.378,1.068,15.174,15.174,0,0,1,7.3-25.236" transform="translate(0 0)" fill="#003a60"/>
+      <path id="Path_77" data-name="Path 77" d="M59.616,36.927A13.509,13.509,0,1,0,47.168,53.672L50.8,57.444,52.253,52.4a13.514,13.514,0,0,0,7.363-15.477" transform="translate(-14.284 -11.545)" fill="#003a60"/>
+    </g>
+  </g>
+</svg>
