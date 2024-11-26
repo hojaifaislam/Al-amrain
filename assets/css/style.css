@@ -2,6 +2,7 @@
    01.fonts
 ========================*/
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
 
 
 :root{
@@ -95,6 +96,7 @@ h1, h2{
 	font-weight: 700;
 	line-height: 1.14;
 	text-transform: uppercase;
+	font-family: "Cinzel Decorative", serif;
 }
 h3{
 	font-size: 2.8rem;
@@ -540,110 +542,72 @@ header.sticky {
 	position: relative;
 	z-index: 1;
 }
-.home_area .container{
-	min-height: 90rem;
-	padding-top: 5rem;
-	padding-bottom: 5rem;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: start;
-	    -ms-flex-align: start;
-	        align-items: flex-start;
-	-webkit-box-pack: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	    -ms-flex-direction: column;
-	        flex-direction: column;
-	position: relative;
-}
-.home_area::before {
-    position: absolute;
+.home_area::after {
     content: '';
+    position: absolute;
+    right: 0;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background: linear-gradient(180deg, rgb(0 0 0 / 0%) 0%, #000000c4 100%);
-    mix-blend-mode: multiply;
+    background-image: url(../img/audio-right.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 19.8rem;
+    height: 52.7rem;
+    animation-duration: 4s;
+    animation-delay: 1000ms;
+    animation-iteration-count: infinite;
+    animation-name: pulse;
+}
+.home_area .container{
+	padding: 8rem 0;
+}
+.slide_img{
+	width: 51rem;
+}
+.text-img{
+	width: 31.2rem;
 }
 .home_area h1{
-	font-size: 8rem;
+	font-size: 6rem;
 	line-height: 1;
 	text-shadow: 0.1rem 0.5rem 4rem rgba(0, 0, 0, 0.5);
-	max-width: 89rem;
+	margin: 2rem 0;
 }
-.home_area p{
-	font-size: 2.5rem;
-	margin: 1rem 0;
-}
-.home_area .button:hover{
-	background-color: var(--dark_blue);
-	color: #fff;
-}
-
-.feature_box{
-	max-width: 58rem;
-	position: absolute;
-	bottom: 0;
-	right: 1.5rem;
-	background-color: #272727;
-	color: var(--dark_blue);
-	border-radius: 0.5rem 0.5rem 0 0;
-	overflow: hidden;
-}
-.feature_title{
-	background-color: var(--dark_blue);
-	color: #fff;
-	padding: 1rem 3rem;
-}
-.feature_title h3{
-	font-size: 2.4rem;
-}
-.feature_body{
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: start;
-	    -ms-flex-align: start;
-	        align-items: flex-start;
-	-webkit-column-gap: 3rem;
-	   -moz-column-gap: 3rem;
-	        column-gap: 3rem;
-	padding: 0.5rem 3rem 3.5rem;
-}
-.feature_img{
-	width: 22rem;
-	-ms-flex-negative: 0;
-	    flex-shrink: 0;
-}
-.feature_img img{
-	width: 100%;
-	border-radius: 0.5rem;
-}
-.feature_body h4{
-	font-weight: 700;
-	font-size: 2rem;
-	line-height: 1.1;
-	margin-bottom: 1rem;
-	color: #fff;
-}
-.feature_body p{
-	line-height: 1.3;
-	color: #fff;
-	font-size: 1.9rem;
-}
-.feature_body .link{
-	color: var(--dark_blue);
-	margin-top: 2.4rem;
-}
-.feature_body .link:hover{
-	color: #fff;
-}
-
+@-webkit-keyframes pulse {
+	0% {
+	  -webkit-transform: scale(1);
+	  transform: scale(1);
+	}
+  
+	50% {
+	  -webkit-transform: scale(1.1);
+	  transform: scale(1.1);
+	}
+  
+	100% {
+	  -webkit-transform: scale(1);
+	  transform: scale(1);
+	}
+  }
+  
+  @keyframes pulse {
+	0% {
+	  -webkit-transform: scale(1);
+	  -ms-transform: scale(1);
+	  transform: scale(1);
+	}
+  
+	50% {
+	  -webkit-transform: scale(1.1);
+	  -ms-transform: scale(1.1);
+	  transform: scale(1.1);
+	}
+  
+	100% {
+	  -webkit-transform: scale(1);
+	  -ms-transform: scale(1);
+	  transform: scale(1);
+	}
+  }
 /*return-to-top START CSS*/
 .back-to-top {
 	font-size: 2.6rem;
@@ -655,7 +619,9 @@ header.sticky {
 	position: fixed;
 	bottom: 3.0rem;
 	right: 2.0rem;
-	border-radius: 50%;
+	/* border-radius: 50%; */
+	border-top-left-radius: 3rem;
+	border-top-right-radius: 3rem;
 	background: var(--yellow);
 	z-index: 1000;
 }
@@ -923,7 +889,8 @@ footer .icon_box a:hover{
 }
 .heading p {
     color: #444;
-    padding-top: 2.4rem;
+    padding-top: 1.5rem;
+	margin-bottom: 1rem;
     font-family: var(--common-font);
     text-transform: uppercase;
 }
@@ -1249,7 +1216,6 @@ figure {
     margin-top: 1rem;
     margin-left: 1rem;
     padding-left: 7rem;
-	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .course-block_two-author p{
 	font-size: 2.1rem;
@@ -1325,14 +1291,14 @@ figure {
 .testi-desc {
 	float: left;
 	width: 100%;
-	border-width: 3px 1px 1px;
+	border-width: .3rem .1rem .1rem;
 	border-color: #fff;
 	border-style: solid;
 	position: relative;
-	padding: 25px 30px;
-	margin-bottom: 40px;
-	-webkit-border-radius: 5px;
-	border-radius: 5px;
+	padding: 2.5rem 3.0rem;
+	margin-bottom: 4.0rem;
+	-webkit-border-radius: .5rem;
+	border-radius: .5rem;
   }
 .testi-desc {
     border-top-color: var(--dark_blue);
@@ -1345,10 +1311,10 @@ figure {
 	content: "";
 	position: absolute;
 	left: 50%;
-	bottom: -18px;
-	border-left: 18px solid transparent;
-	border-right: 18px solid transparent;
-	border-top: 18px solid #fff;
+	bottom: -1.8rem;
+	border-left: 1.8rem solid transparent;
+	border-right: 1.8rem solid transparent;
+	border-top: 1.8rem solid #fff;
 	-webkit-transform: translateX(-50%);
 	-ms-transform: translateX(-50%);
 	-o-transform: translateX(-50%);
@@ -1358,10 +1324,10 @@ figure {
 	content: "";
 	position: absolute;
 	left: 50%;
-	border-left: 18px solid transparent;
-	border-right: 18px solid transparent;
-	border-top: 18px solid #fff;
-	bottom: -16px;
+	border-left: 1.8rem solid transparent;
+	border-right: 1.8rem solid transparent;
+	border-top: 1.8rem solid #fff;
+	bottom: -1.6rem;
 	-webkit-transform: translateX(-50%);
 	-ms-transform: translateX(-50%);
 	-o-transform: translateX(-50%);
@@ -1382,14 +1348,120 @@ figure {
 	color: #fff;
 } 
 .owl-carousel .owl-stage{
-	padding: 2px;
+	padding: .2rem;
 }
 .owl-carousel .owl-stage-outer{
-	padding: 2px;
+	padding: .2rem;
 }
 
 .slider1 .owl-stage{
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+}
+
+/* about_area */
+.about_area{
+	padding: 8rem 0 7rem;
+}
+.islamic-history p {
+    padding-bottom: 3.0rem;
+	color: #444;
+	font-size: 2.2rem;
+	text-align: justify;
+}
+.islamic-history {
+    width: 100%;
+}
+ul.list li {
+    padding-bottom: 1.4rem;
+    position: relative;
+    padding-left:2.0rem;
+    font-size: 2rem;
+	color: #000;
+}
+ul.list li:before {
+    content: "";
+    position: absolute;
+    width: 1.0rem;
+    height: 1.0rem;
+    background-color: var(--dark_blue);
+    border-radius: 50%;
+    top: .7rem;
+    left:0;
+}
+.islamic-history  a.btn {
+    background-color: transparent;
+    border: .3rem solid var(--theme-colour);
+    margin-top: 3.0rem;
+}
+.circle-text {
+    position: relative;
+    text-align: center;
+}
+.circle-text img.circle-text-img {
+    top: 5%;
+    position: absolute;
+    left: 21%;
+    animation: rotate 25s infinite;
+}
+.circle-text figure.circle-img {
+    width: 23.4rem;
+    height: 23.4rem;
+    background-color: var(--yellow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: auto;
+}
+.circle-text figure.circle-img img {
+    border: .1rem solid #444;
+    width: 11.8rem;
+    padding: 3.0rem;
+    border-radius: 50%;
+}
+@keyframes rotate {
+	0% {
+	  -webkit-transform: rotate3d(0, 0, 1, 0deg);
+	  transform: rotate3d(0, 0, 1, 0deg);
+	}
+	50% {
+	  -webkit-transform: rotate3d(0, 0, 1, 360deg);
+	  transform: rotate3d(0, 0, 1, 360deg);
+	}
+	100% {
+	  -webkit-transform: rotate3d(0, 0, 1, 0deg);
+	  transform: rotate3d(0, 0, 1, 0deg);
+	}
+  }
+
+.real-history-book {
+    margin-top: 3.5rem;
+}
+.real-history-book img {
+    border-bottom-left-radius: 15.0rem;
+    border-bottom-right-radius: 15.0rem;
+	width: 100%;
+}
+.real-history-book.two {
+    margin-top: .0rem;
+    position: relative;
+}
+.real-history-book.two:before {
+    z-index: -1;
+    left: -77%;
+    content: "";
+    position: absolute;
+    background-image: url(../img/background-history.png);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    mix-blend-mode: difference;
+    bottom: 11%;
+}
+.real-history-book.two img {
+    border-radius: 0;
+    border-top-left-radius: 25.0rem;
+    border-top-right-radius: 25.0rem;
 }
